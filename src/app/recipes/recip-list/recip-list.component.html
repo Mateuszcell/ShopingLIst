@@ -5,17 +5,11 @@
 </div>
 <hr>
 <div class="row">
-  <div class="col-xs-12" *ngFor="let a of recipes">
-    <a href="X" class="list-group-item clearfix" >
-      <div class="pull-left">
-        <h4 class="list-group-item-heading">{{a.name}}</h4>
-        <p class="list-group-item-text">{{a.description}}</p>
-      </div>
-      <span class="pull-right">
-        <img src="{{a.imagePath}}" alt="" class="img-responsive" style="max-height: 50px;">
-      </span>
-    </a>
-  <app-recip-item></app-recip-item>
-</div>
+  <div class="col-xs-12">
+    <app-recip-item *ngFor="let element of recipes"
+                    [recip]="element"
+                    (recipSelected)="onRecipSelected(element)"
+    ></app-recip-item>
+  </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  feautureName = 'recip';
+
+  onNavigate(name: string) {
+    this.feautureName = name;
+    console.log(name);
+  }
+
   title = 'ShopingLIst';
 }

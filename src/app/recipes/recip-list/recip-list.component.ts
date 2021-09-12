@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Recipe} from "../recip/recipe.model";
 
 @Component({
@@ -7,9 +7,14 @@ import {Recipe} from "../recip/recipe.model";
   styleUrls: ['./recip-list.component.css']
 })
 export class RecipListComponent implements OnInit {
+ @Output() recipWasSelested = new EventEmitter<Recipe>();
 recipes: Recipe[] = [
-  new Recipe("Kaczka","Faszerowany indyk z kaczki","https://nck.pl/upload/thumb/2020/08/indyk_sie_rozindyczyl_auto_800x800.png")
+  new Recipe("Kaczka","Faszerowana Kaczka","https://nck.pl/upload/thumb/2020/08/indyk_sie_rozindyczyl_auto_800x800.png")
 ];
+  onRecipSelected(recip:Recipe){
+    this.recipWasSelested.emit(recip);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
