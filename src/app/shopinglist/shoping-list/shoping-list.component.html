@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-shoping-edit (passIngridients)="onAdd($event)"></app-shoping-edit>
+    <hr>
+    <ul class="list-group" *ngFor="let ing of ingridients">
+      <a class="list-group-item" style="cursor: pointer"
+      >
+        {{ing.name}}
+        {{ing.amount}}
+      </a>
+    </ul>
+  </div>
+</div>
