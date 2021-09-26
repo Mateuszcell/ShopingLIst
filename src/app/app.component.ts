@@ -13,5 +13,5 @@ export class AppComponent {
     console.log(name);
   }
 
-  title = 'ShopingLIst';
+  title = 'ShoppingList';
 }

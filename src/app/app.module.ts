@@ -7,9 +7,10 @@ import { RecipListComponent } from './recipes/recip-list/recip-list.component';
 import { RecipComponent } from './recipes/recip/recip.component';
 import { RecipDtailsComponent } from './recipes/recip-detail/recip-dtails.component';
 import { RecipItemComponent } from './recipes/recip-list/recip-item/recip-item.component';
-import { ShopingListComponent } from './shopinglist/shoping-list/shoping-list.component';
-import { ShopingEditComponent } from './shopinglits/shoping-edit/shoping-edit.component';
+import { ShoppingListComponent } from './shoppinglist/shopping-list/shopping-list.component';
+import { ShopingEditComponent } from './shoppinglist/shopping-edit/shoping-edit.component';
 import { DropdownDirective } from './dropdown.directive';
+import {ShoppingListService} from "./shoppinglist/shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -19,14 +20,14 @@ import { DropdownDirective } from './dropdown.directive';
     RecipComponent,
     RecipDtailsComponent,
     RecipItemComponent,
-    ShopingListComponent,
+    ShoppingListComponent,
     ShopingEditComponent,
     DropdownDirective
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
